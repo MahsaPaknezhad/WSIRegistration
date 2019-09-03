@@ -1,7 +1,6 @@
 
 #include <cv.h>
 #include <highgui.h>
-
 #include "TranslateScale.hpp"
 #include "Rotate.hpp"
 #include "SIFTRegistration.hpp"
