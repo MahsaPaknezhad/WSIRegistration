@@ -9,7 +9,4 @@ High resolution 2D whole slide imaging provides rich information about the tissu
 
 In this repository, we have included our implementation of the proposed regional registration algorithm for whole slide images which incrementally focuses registration on the area around the region of interest. 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> f147fe4874693ec56a30050cc538528ac32f3edf
