@@ -1,8 +1,10 @@
 /*
  * TranslateScale.hpp
  *
- *  Created on: Jan 20, 2016
+*  Created on: Jan 20, 2016
  *      Author: lohsy
+ *  Improved on: Apr 01, 2018
+ *	Author: mahsa
  */
 
 #ifndef TRANSLATESCALE_HPP_
@@ -12,11 +14,6 @@
 #include <fstream>
 #include "Utils.hpp"
 
-/**
- * Determines the translation and scaling.
- * Center of image is used as the point for translation.
- * Radius of first slice is used for determine scaling.
- */
 class TranslateScale {
 public:
 
