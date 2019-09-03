@@ -1,10 +1,8 @@
 # WSIRegistration
 
 This repository contains the c++ code for the paper:
-
 *"Regional Registration of Whole Slide Image Stacks Containing Highly Deformed Artefacts"* 
-
-Submitted to Bioinformatics Journal and Opencv-3.4.1 and opencv_contrib3.4.1 were used for this implementation. 
+Submitted to Bioinformatics Journal. Opencv-3.4.1 and opencv_contrib3.4.1 were used for this implementation. 
 
 # Motivation:
 High resolution 2D whole slide imaging provides rich information about the tissue structure. Moreover, this information can be a lot richer if these 2D images can be stacked into a 3D tissue volume. A 3D analysis, however, requires accurate reconstruction of the tissue volume from the 2D image stack. This task is not trivial due to the distortions that each individual tissue slice experiences while cutting and mounting the tissue on the glass slide. Performing registration for the whole tissue slices may be adversely affected by the deformed tissue regions. Consequently, regional registration is found to be more effective. 
