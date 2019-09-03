@@ -3,6 +3,9 @@
  *
  *  Created on: Jan 20, 2016
  *      Author: lohsy
+ *  Improved on: Apr 01, 2018
+ *	Author: mahsa
+ *
  */
 
 #ifndef ROIINFO_HPP_

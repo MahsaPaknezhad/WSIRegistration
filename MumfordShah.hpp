@@ -3,6 +3,7 @@
  *
  *  Created on: Jan 20, 2016
  *      Author: lohsy
+ *
  */
 
 #ifndef MUMFORDSHAH_HPP_
@@ -12,8 +13,8 @@
 #include<stdlib.h>
 #include<string.h>
 #include<math.h>
-#include<highgui.h> // HK
-#include<cv.h>      // HK
+#include<highgui.h> 
+#include<cv.h>      
 
 /**
  * Does MumfordShah segmentation.
@@ -498,73 +499,6 @@ void MumfordShah::metropolis(int ht,int wd){
   }
 }
 
-// -----------------------------------------------------
-//void metropolis2(int ht,int wd){
-//
-////  operation for single MCS (cluster growth)
-//
-//  int i,x,y,spnew,spold;
-//  int R;
-//  double dE=0,dEc=0,dEh=0;
-//
-//  for(i=0;i<N;i++){
-//
-///*
-//    x=(int)(wd*(rand()/(RAND_MAX+1.0)));
-//    y=(int)(ht*(rand()/(RAND_MAX+1.0)));
-//*/
-//
-////
-//      R=(int)(Cont_Number*(rand()/(RAND_MAX+1.0)))+1;
-//
-//      if(line_x[R]>=wd){
-//   //
-//   //            vertical direction
-//   //
-//        x=line_x[R]-wd;
-//        y=(line_y[R]+(int)(2*(rand()/(RAND_MAX+1.0)))); // %height;
-//      }else{
-//   //
-//   //            horizontal direction
-//   //
-//        x=(line_x[R]+(int)(2*(rand()/(RAND_MAX+1.0)))); // %width;
-//        y=line_y[R];
-//      }
-////
-//
-//    // check range of x,y
-//    if(x<0 || x>=wd || y<0 || y>=ht ) {
-//      printf("%s %d error in location xy %d %d, size wd ht %d %d\n",__FILE__,__LINE__,x,y,wd,ht);
-//      throw;
-//    }
-//    spold=spin[x][y];
-//    spnew=(spin[x][y]+rand()%(iqq-1)+1)%iqq;
-//
-//    if(S_Number[spold]<=1) {
-//      // do nothing
-//    }
-//    else {
-//      NewC_Number=Cont_Number+Inline_UD(x,y,spnew,spold,wd,ht);
-//      dEc=mu*(NewC_Number-Cont_Number);
-//      dEh=dHistE(original[x][y],spnew,spold);
-//      dE=dEh+dEc;
-//
-//      if((rand()/(RAND_MAX+1.0))<=exp(-dE/T)){
-//         Ec=Ec+dEc;
-//         Eh=Eh+dEh;
-//         E=Eh+Ec;
-////
-//         rewrite(x,y,spnew,spold,ht,wd);
-////
-//         Cont_Number=NewC_Number;
-//         spin[x][y]=spnew;
-//         S_Number[spold]=NewS_Number[spold]; S_Number[spnew]=NewS_Number[spnew];
-//         C[spold]=NewC[spold]; C[spnew]=NewC[spnew];
-//         O_Sum[spold]=NewO_Sum[spold]; O_Sum[spnew]=NewO_Sum[spnew];
-//      }
-//    }
-//  }
-//}
 
 // -----------------------------------------------------
 void MumfordShah::rewrite(int x, int y, int spnew, int spold, int ht, int wd){

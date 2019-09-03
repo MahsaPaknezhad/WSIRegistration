@@ -5,6 +5,7 @@
  *      Author: lohsy
  *  Improved on: Apr 01, 2018
  *	Author: mahsa
+ *
  */
 
 #ifndef TRANSLATESCALE_HPP_

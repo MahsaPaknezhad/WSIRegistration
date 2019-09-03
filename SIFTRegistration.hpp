@@ -7,12 +7,20 @@
 #include <opencv2/calib3d/calib3d.hpp>
 #include <cv.h>
 #include <set>
-
 #include <opencv2/xfeatures2d.hpp>
 #include <opencv2/features2d/features2d.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/video/video.hpp>
 #include <opencv2/plot.hpp>
+
+/*
+ *
+ *  Created on: Jan 20, 2016
+ *      Author: lohsy
+ *  Improved on: Apr 01, 2018
+ *	Author: mahsa
+ *
+*/
 
 
 typedef std::vector<cv::KeyPoint> KeyPoints;

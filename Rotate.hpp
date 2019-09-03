@@ -1,8 +1,11 @@
 /*
  * Rotate.hpp
  *
- *  Created on: Jan 21, 2016
+ *  Created on: Jan 20, 2016
  *      Author: lohsy
+ *  Improved on: Apr 01, 2018
+ *	Author: mahsa
+ *
  */
 
 #ifndef ROTATE_HPP_
