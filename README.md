@@ -27,3 +27,6 @@ The <img src="https://render.githubusercontent.com/render/math?math=\{\theta, dx
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-----------------------:|:-------------------------:
 <img src="slice1.png" width="160"> |  <img src="slice2.png" width="160">|  <img src="mumford1.png" width="160">|  <img src="mumford2.png" width="160">|  <img src="mumford2_reg.png" width="160">|  <img src="slice2_reg.png" width="160">
 
+# 3) Target blood vessle registration
+<img src="target_registration.jpg">
+
