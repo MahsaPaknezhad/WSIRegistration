@@ -17,6 +17,6 @@ Extra stains and artifacts around the tissue can affect the registration outcome
 
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![UML](original.tiff)  |  ![UML](thresholded.tiff)
+![original](original.jpg)  |  ![threshold](thresholded.tiff)
 
 
