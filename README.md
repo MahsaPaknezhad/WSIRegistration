@@ -14,11 +14,11 @@ In order to register a target blood vessel in the whole slide images, three step
 
 # 1) Preprocessing
 Extra stains and artifacts around the tissue can affect the registration outcome. To remove these artifacts, each image is converted to the gray scale and smoothed using a Gaussian filter. The smoothed image is then thresholded. Since an accurate segmentation of the tissue from the surrounding artifacts cannot be achieved merely by thresholding, an opening and later an closing morphological operation was applied on the output mask from thresholdingto get a mask that covers the artifacts and extra stains around the tissue. The final segmentation mask is then applied to the image to remove the surrounding artifacts. Contours in the new image are then detected. The contours which are closer to the center of the image and surround the largest area in the image are identified. Extra tissue and stains outside the convex hull of the selected contours are removed, resulting in a cleaned tissue image. 
-<p align="center">
+
 Original Image             |  Thresholded Image        | Selected Edges            | Convex Hull of Edges      | Cleaned Image
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-<img src="original.jpg" width="150"> |  <img src="thresholded.jpg" width="150">|  <img src="overlay.jpg" width="150">|  <img src="overlay_hull.jpg" width="150">|  <img src="clean.jpg" width="150">
- </p>
+<img src="original.jpg" width="160"> |  <img src="thresholded.jpg" width="160">|  <img src="overlay.jpg" width="160">|  <img src="overlay_hull.jpg" width="160">|  <img src="clean.jpg" width="160">
+ 
 
 # 2) Whole tissue registration
 In this stage, relative rotations or displacements in the location of the tissue across consecutive virtual slides are corrected. The cleaned image, is segmented using a multi-resolution Monte Carlo method of Sashida. Next, each consecutive pair of Mumford-Shah segmented images are registered independently. For each pair of images, a combination of varying translation <img src="https://render.githubusercontent.com/render/math?math=(dx,dy)"> and rotation (<img src="https://render.githubusercontent.com/render/math?math=\theta">) transformations are applied to the second (moving) image to find the rotation and translation parameters which make transformed moving image most similar to the fixed image.
