@@ -25,5 +25,5 @@ The <img src="https://render.githubusercontent.com/render/math?math=\{\theta, dx
 
  Clean Image 1             |  Clean Image 2        | Mumford Seg. 1            | Mumford Seg. 2      | Mumford Registered 2         | Clean Registered    2
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-----------------------:|:-------------------------:
-<img src="slice1.png" width="150"> |  <img src="slice2.png" width="150">|  <img src="mumford1.png" width="150">|  <img src="mumford2.png" width="150">|  <img src="mumford2_reg.png" width="150">|  <img src="slice2_reg.png" width="150">
+<img src="slice1.png" width="160"> |  <img src="slice2.png" width="160">|  <img src="mumford1.png" width="160">|  <img src="mumford2.png" width="160">|  <img src="mumford2_reg.png" width="160">|  <img src="slice2_reg.png" width="160">
 
