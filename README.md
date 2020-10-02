@@ -17,6 +17,6 @@ Extra stains and artifacts around the tissue can affect the registration outcome
 
 Original Image             |  Thresholded Image        | Selected Edges            | Convex Hull of Edges      | Cleaned Image
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![original](original.jpg)  |  ![threshold](thresholded.jpg)|  ![edges](overlay.jpg)|  ![convex-hull](overlay_hull.jpg)|  ![clean](clean.jpg)
+![original](original.jpg | width=100)  |  ![threshold](thresholded.jpg | width=100)|  ![edges](overlay.jpg | width=100)|  ![convex-hull](overlay_hull.jpg | width=100)|  ![clean](clean.jpg | width=100)
 
 
