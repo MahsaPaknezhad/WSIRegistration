@@ -29,6 +29,7 @@ The <img src="https://render.githubusercontent.com/render/math?math=\{\theta, dx
 
 # 3) Target blood vessle registration
 A small box around the blood vessel of interest is defined by the user for the image at its full resolution. In order to register two image slices, registration is first performed for lower resolutions of the two images. Having extracted the region of interest in the lowest resolution images, distinctive key points are detected in both ROIs using SIFT feature detection algorithm. If more than 8 strong matches are found for the two ROIs, the top 8 matches are selected. Since registration is performed locally, a rigid registration is found sufficient. A rigid transformation can be calculated with a minimum of 3 key points per image. Therefore, 56 different combinations of 3 matches and consequently, 56 different transformation matrices can be obtained using the 8 selected matches. All the transformations are applied to the images giving a series of 56 warped images. The transformation matrix which gives the smallest sum of squared difference in pixel intensity is chosen. The same procedure is done on higher resolution of the images. 
-
-<align="center", img src="target_registration.jpg">
+<p align="center">
+<img src="target_registration.jpg">
+ </p>
 
