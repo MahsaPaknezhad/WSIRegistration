@@ -15,8 +15,8 @@ In order to register a target blood vessel in the whole slide images, three step
 # Preprocessing
 Extra stains and artifacts around the tissue can affect the registration outcome. To remove these artifacts, each image is converted to the gray scale and smoothed using a Gaussian filter. The smoothed image is then thresholded. Since an accurate segmentation of the tissue from the surrounding artifacts cannot be achieved merely by thresholding, an opening and later an closing morphological operation was applied on the output mask from thresholdingto get a mask that covers the artifacts and extra stains around the tissue. The final segmentation mask is then applied to the image to remove the surrounding artifacts. Contours in the new image are then detected. The contours which are closer to the center of the image and surround the largest area in the image are identified. Extra tissue and stains outside the convex hull of the selected contours are removed, resulting in a cleaned tissue image. 
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![original](original.jpg)  |  ![threshold](thresholded.jpg)
+Original Image             |  Thresholded Image        | Selected Edges            | Convex Hull of Edges      | Cleaned Image
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![original](original.jpg)  |  ![threshold](thresholded.jpg)|  ![edges](overlay.jpg)|  ![convex-hull](overlay_hull.jpg)|  ![clean](clean.jpg)
 
 
