@@ -24,6 +24,6 @@ In this stage, relative rotations or displacements in the location of the tissue
 The <img src="https://render.githubusercontent.com/render/math?math=\{\theta, dx, dy\}"> triplet which gives the least sum of squared difference is chosen and its corresponding transformation matrix is applied to the moving image. These two steps roughly align the images in consecutive image slides. 
 
  Clean Image 1             |  Clean Image 2        | Mumfored Segmented 1            | Mumfort Segmented 2      | Mumfored Registered 2      | Clean Registered 2
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 <img src="slice1.png" width="150"> |  <img src="slice2.png" width="150">|  <img src="mumford1.png" width="150">|  <img src="mumford2.png" width="150">|  <img src="mumford2_reg.png" width="150">|  <img src="slice2_reg.png" width="150">
 
