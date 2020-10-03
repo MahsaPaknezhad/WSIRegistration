@@ -22,13 +22,13 @@ Original Image             |  Thresholded Image        | Selected Edges         
 In this stage, relative rotations or displacements in the location of the tissue across consecutive virtual slides are corrected. The cleaned image, is segmented using a multi-resolution Monte Carlo method (gray-level file). Next, each consecutive pair of Mumford-Shah segmented images are registered in a single scale independently. For each pair of images, a combination of varying translation <img src="https://render.githubusercontent.com/render/math?math=(dx,dy)"> and rotation (<img src="https://render.githubusercontent.com/render/math?math=\theta">) transformations are applied to the second (moving) image to find the rotation and translation parameters which make transformed moving image most similar to the fixed image.
 The <img src="https://render.githubusercontent.com/render/math?math=\{\theta, dx, dy\}"> triplet which gives the least sum of squared difference is chosen and its corresponding transformation matrix is applied to the moving image.  
 
- Clean Image 1             |  Clean Image 2        | Mumford Seg. 1            | Mumford Seg. 2      | Mumford Reg. 2         | Clean Reg. 2
+ Clean Fixed Image            |  Clean Moving Image        | Mumford Fixed Seg.            | Mumford Moving Seg.      | Mumford Moving Reg.         | Clean Moving Reg.
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-----------------------:|:-------------------------:
 <img src="slice1.png" width="160"> |  <img src="slice2.png" width="160">|  <img src="mumford1.png" width="160">|  <img src="mumford2.png" width="160">|  <img src="mumford2_reg.png" width="160">|  <img src="slice2_reg.png" width="160">
 
 # 3) Target blood vessle registration
 This stage of the algorithm is multi-scale. A small box around the blood vessel of interest is defined by the user for the image at its full resolution. In order to register two image slices, registration is first performed for lower resolutions of the two images. Having extracted the region of interest in the lowest resolution images, distinctive key points are detected in both ROIs using SIFT feature detection algorithm. The top 8 matches are selected. Since registration is performed locally, a rigid registration is found sufficient. A rigid transformation can be calculated with a minimum of 3 key points per image. Therefore, 56 different combinations of 3 matches and consequently, 56 different transformation matrices can be obtained using the 8 selected matches. All the transformations are applied to the images giving a series of 56 warped images. The transformation matrix which gives the smallest sum of squared difference in pixel intensity is chosen. The same procedure is done on higher resolution of the images. 
 <p align="center">
-<img src="target_registration.jpg">
+<img src="target_registration.jpg" width=400>
  </p>
 
