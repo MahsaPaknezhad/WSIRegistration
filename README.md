@@ -1,7 +1,7 @@
 # WSIRegistration
 
 This repository contains the c++ code for the paper:
-*"Regional Registration of Whole Slide Image Stacks Containing Highly Deformed Artefacts"* submitted to BMC Bioinformatics Journal. 
+*"Regional Registration of Whole Slide Image Stacks Containing Major Histological Artifacts"* submitted to BMC Bioinformatics Journal. 
 Opencv-3.4.1 and Opencv_contrib3.4.1 libraries were used for this implementation. 
 The executable file named gray-levels performs Mumford-Shah segmentation.
 
