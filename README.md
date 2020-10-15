@@ -8,9 +8,9 @@ The executable file named gray-levels performs Mumford-Shah segmentation.
 # Motivation:
 In this repository, we have included our implementation of the proposed regional registration algorithm for whole slide images which registers whole slides image stack around the region of interest. We provide a brief description of different stages of the proposed algorithm together with an example.
 
-In order to register a target blood vessel in the whole slide images, three steps are carried out as follows: 1) Preprocessing, 2) Whole tissue registration, and 3) Target blood vessel registration. 
+In order to register a target blood vessel in the whole slide images, three steps are carried out as follows: 1) Removing surrounding artifacts, 2) Rough alignment of consecutive tissue slides, and 3) Target blood vessel registration. 
 
-# 1) Preprocessing
+# 1) Removing surrounding artifacts
 Extra stains and artifacts around the tissue can affect the registration outcome. To remove these artifacts, each image is converted to the gray scale and smoothed using a Gaussian filter. The smoothed image is then thresholded. Since an accurate segmentation of the tissue from the surrounding artifacts cannot be achieved merely by thresholding, an opening and later a closing morphological operation was applied on the output mask from thresholding to get a mask that covers the artifacts and extra stains around the tissue. The final segmentation mask is applied to the image to remove the surrounding artifacts. Contours in the new image are then detected. The contours which are closer to the center of the image and surround the largest area in the image are identified. Extra tissue and stains outside the convex hull of the selected contours are removed, resulting in a cleaned tissue image. 
 
 Original Image             |  Thresholded Image        | Selected Edges            | Convex Hull of Edges      | Cleaned Image
@@ -18,7 +18,7 @@ Original Image             |  Thresholded Image        | Selected Edges         
 <img src="original.jpg" width="160"> |  <img src="thresholded.jpg" width="160">|  <img src="overlay.jpg" width="160">|  <img src="overlay_hull.jpg" width="160">|  <img src="clean.jpg" width="160">
  
 
-# 2) Whole tissue registration
+# 2) Rough alignment of consecutive tissue slides
 In this stage, relative rotations or displacements in the location of the tissue across consecutive virtual slides are corrected. The cleaned image, is segmented using a multi-resolution Monte Carlo method (gray-level file). Next, each consecutive pair of Mumford-Shah segmented images are registered in a single scale independently. For each pair of images, a combination of varying translation <img src="https://render.githubusercontent.com/render/math?math=(dx,dy)"> and rotation (<img src="https://render.githubusercontent.com/render/math?math=\theta">) transformations are applied to the second (moving) image to find the rotation and translation parameters which make transformed moving image most similar to the fixed image.
 The <img src="https://render.githubusercontent.com/render/math?math=\{\theta, dx, dy\}"> triplet which gives the least sum of squared difference is chosen and its corresponding transformation matrix is applied to the moving image.  
 
