@@ -30,4 +30,9 @@ This stage of the algorithm is multi-scale. A small box around the region of int
 <p align="center">
 <img src="target_registration.jpg" width=600>
  </p>
+ 
+ # Paper
+ Please cite our paper: 
+ 
+ Paknezhad, M., Loh, S. Y. M., Choudhury, Y., Koh, V. K. C., Yong, T. T. K., Tan, H. S., ... & Lee, H. K. (2020). Regional registration of whole slide image stacks containing major histological artifacts. BMC bioinformatics, 21(1), 1-20.
 
